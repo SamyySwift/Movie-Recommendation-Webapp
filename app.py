@@ -6,12 +6,17 @@ from functions import *
 api_key = "5a3e8d796d7e3539c7aefeff6b5c26cd"
 
 st.set_page_config(layout="wide")
+with open("style.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 st.title("Movie Recommendation App")
+st.markdown('#')
 
-st.sidebar.subheader("Recommedation Settings")
-no_of_rec = int(st.sidebar.slider("Select No. of Movie Recommendations", 1, 20, 10))
-n_cols = st.sidebar.number_input("Number of columns", 2, 8, 5)
+
+st.sidebar.markdown(f" ## :gear: Recommendation Settings")
+st.sidebar.markdown('---')
+no_of_rec = int(st.sidebar.slider("Select Number of Movie Recommendations", 1, 20, 10))
+n_cols = st.sidebar.number_input("Select Number of columns", 2, 8, 5)
 n_cols = int(n_cols)
 
 
@@ -37,7 +42,7 @@ if movie != '':
         col1, col2 = st.columns(2)
         col1.image(f'https://image.tmdb.org/t/p/w500{poster}', width=300)
         st.markdown('#')
-        st.markdown(f"### Top {no_of_rec} Recommendations for {movie}")
+        st.markdown(f"### :tada: Top {no_of_rec} Recommendations for {movie} :tada:")
         st.markdown('---')
 
         # top_movies = [get_title_from_index(sorted_similar_movies[i][0]) for i in range(10)]
@@ -63,7 +68,7 @@ if movie != '':
             col.image(poster, use_column_width=True)
           
     except:
-        st.write("Movie not found in database!")
+        st.markdown(f"### :warning: Movie not found in database! :warning:")
 else:
     pass
 
