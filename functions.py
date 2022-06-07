@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+
+
 ###### helper functions. Use them when needed #######
 def get_title_from_index(index):
 	return df[df.index == index]["title"].values[0]
@@ -28,7 +30,8 @@ def combine_features(row):
 
 df["combined_features"] = df.apply(combine_features,axis=1)
 
-
+# def suggest():
+# 	return
 
 ##Step 4: Create count matrix from this new combined column
 # cv = CountVectorizer()

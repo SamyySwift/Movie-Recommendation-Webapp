@@ -6,10 +6,11 @@ from functions import *
 api_key = "5a3e8d796d7e3539c7aefeff6b5c26cd"
 
 st.set_page_config(layout="wide")
+
 st.title("Movie Recommendation App")
 
 st.sidebar.subheader("Recommedation Settings")
-no_of_rec = int(st.sidebar.slider("Number of Recommendation", 1, 20, 10))
+no_of_rec = int(st.sidebar.slider("Select No. of Movie Recommendations", 1, 20, 10))
 n_cols = st.sidebar.number_input("Number of columns", 2, 8, 5)
 n_cols = int(n_cols)
 
