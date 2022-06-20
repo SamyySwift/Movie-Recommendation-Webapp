@@ -9,7 +9,7 @@
 ### ⚙️  **Execute**
 Run the following command on the terminal to deploy the app locally
 - `pip install -r requirements.txt`
-- streamlit run app.py`
+- `streamlit run app.py`
 
 ### 🕸️ **Deployed Webapp**
 App is deployed on Streamlit Cloud. 
