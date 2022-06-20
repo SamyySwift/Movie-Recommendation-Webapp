@@ -13,6 +13,6 @@ Run the following command on the terminal to deploy the app locally
 
 ### 🕸️ **Deployed Webapp**
 App is deployed on Streamlit Cloud. 
-🔗 [webapp]('https://share.streamlit.io/samyyswift/movie-recommendation-webapp/main/app.py')
+🔗 [webapp](https://share.streamlit.io/samyyswift/movie-recommendation-webapp/main/app.py)
 
 
